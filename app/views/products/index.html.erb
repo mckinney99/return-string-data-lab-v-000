@@ -1,14 +1,14 @@
 <% @products.each do |product| %>
-     <p><%= product.name %> - <%= product.price %></p>
-     <ul>
-       <div id="description-<%= product.id %>"><li><%= truncate product.description %></li>
-     </ul>
-       <button class="js-more" data-id="<%= product.id %>">More Info</button>
-     </div>
-   <% end %>
+  <p><%= product.name %> - <%= product.price %></p>
+  <ul>
+    <div id="description-<%= product.id %>"><li><%= truncate product.description %></li>
+  </ul>
+  <button class="js-more" data-id="<%= product.id %>">More Info</button>
+    </div>
+<% end %>
 
 
- <script type="text/javascript" charset="utf-8">
+<script type="text/javascript" charset="utf-8">
  $(function() {
    $(".js-more").on("click", function() {
      var id = $(this).data("id");
